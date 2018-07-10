@@ -1,18 +1,18 @@
 import React , { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './index.css';
+import logo from './logo.svg';
 
 
-class About extends Component {
-  render() {
-    return; (
-    <p>
-      This is from our About page! <br/>
-      Read to find out more about our business.
-    </p>
+
+export default function About(props) {
+    return (
+      <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="App-title">Welcome to The About page</h1>
+      </header>
+        {props.children}
+      </div>
     )
-
-  }
 }
-
-export default About;

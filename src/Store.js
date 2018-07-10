@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './index.css';
 
 
-class Store extends Component {
-  render() {
-    return (
-    <p>
-      This is from our Store page!
-      <br/>
-      Look around and feel free to add anyhing you like the cart for check out!
-    </p>
-    )
-
-  }
+export default function Store(props) {
+  return (
+    <div className="App">
+    <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <h2 className="App-title">Welcome to The Store page</h2>
+    </header>
+      {props.children}
+    </div>
+  )
 }
-
-export default Store;
