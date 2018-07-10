@@ -20,7 +20,14 @@ ReactDOM.render(
       <Route path="/about" component={About} />
       <Route path="/store" render={()=> (
         <Store>
-          Whatever I put here will be rendered in out Store page as a prop.
+          {/* Whatever I put here will be rendered in out Store page as a prop. This is how we specify what other path(s) to render out that are the linked to the store, as its children/ props*/}
+          <Switch>
+            <Route path="/store/nails" component={Nails} />
+            <Route path="/store/hammers" component={Hammers} />
+            <Route path="/store/drills" component={Drills} />
+            {/* This store has a component instead of a path; it will be our landing-page */}
+            <Route component={StoreLanding} />
+          </Switch>
         </Store>
       )} />
     </Switch>
